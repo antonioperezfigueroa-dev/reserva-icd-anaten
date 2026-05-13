@@ -22,7 +22,7 @@ HORARIOS = {
 def obtener_fecha_reserva():
     hoy = datetime.now().strftime("%A")
     if hoy not in HORARIOS:
-        raise Exception("Hoy no toca reservar.")
+        print("Hoy no toca reservar (modo prueba).")
     dia_objetivo, _ = HORARIOS[hoy]
     dias_semana = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
     idx_hoy = dias_semana.index(hoy)
