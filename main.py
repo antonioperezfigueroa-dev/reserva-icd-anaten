@@ -1,3 +1,4 @@
+# actualización 14 mayo
 print("VERSIÓN 14-MAY-2026 11:45 — Script corregido")
 
 import os
