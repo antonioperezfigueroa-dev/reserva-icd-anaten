@@ -1,4 +1,5 @@
-print("VERSIÓN 14-MAY-2026 11:45 — Script corregido")
+print("VERSIÓN 14-MAY-2026 12:45 — Forzado de Actualización")
+FORZAR_ACTUALIZACION = "14-05-2026 12:45"
 #actualización 14 mayo
 import os
 import time
