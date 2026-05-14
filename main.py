@@ -1,6 +1,5 @@
-# actualización 14 mayo
 print("VERSIÓN 14-MAY-2026 11:45 — Script corregido")
-
+#actualización 14 mayo
 import os
 import time
 from datetime import datetime, timedelta
