@@ -1,10 +1,3 @@
-name: Reserva ICD Ceuta
-
-on:
-  schedule:
-    - cron: "0 3 * * 2,4,6"   # Martes, jueves y sábado a las 05:00 hora española
-  workflow_dispatch:
-
 jobs:
   run-script:
     runs-on: ubuntu-latest
@@ -25,9 +18,13 @@ jobs:
           pip install playwright
           playwright install chromium
 
+      - name: Test ICD connectivity (curl)
+        run: |
+          echo "Probando conexión con ICD..."
+          curl -I https://reservasicd.ceuta.es/a2SportWeb/login.aspx || true
+
       - name: Run script
         env:
           ICD_USER: ${{ secrets.ICD_USER }}
           ICD_PASS: ${{ secrets.ICD_PASS }}
         run: python main.py
-
