@@ -1,4 +1,5 @@
-print("VERSIÓN 14-MAY-2026 10:00 — Script actualizado")
+print("VERSIÓN 14-MAY-2026 11:45 — Script corregido")
+
 import os
 import time
 from datetime import datetime, timedelta
@@ -65,8 +66,8 @@ def reservar(forzar_manana=True):
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
 
+        # ❗ CORREGIDO: se elimina timeout del new_context()
         context = browser.new_context(
-            timeout=120000,
             user_agent=(
                 "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) "
                 "AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 "
