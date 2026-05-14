@@ -1,3 +1,10 @@
+name: Reserva ICD Ceuta
+
+on:
+  schedule:
+    - cron: "0 3 * * 2,4,6"
+  workflow_dispatch:
+
 jobs:
   run-script:
     runs-on: ubuntu-latest
