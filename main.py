@@ -19,7 +19,7 @@ HORARIOS = {
 }
 
 # ---------------------------------------------------------
-# FORZAR RESERVA PARA MAÑANA (modo test)
+# FORZAR RESERVA PARA MAÑANA (modo automático)
 # ---------------------------------------------------------
 def obtener_fecha_reserva_forzada():
     fecha = datetime.now() + timedelta(days=1)
@@ -50,7 +50,7 @@ def click_con_reintento(page, texto, intentos=3):
 # ---------------------------------------------------------
 # FUNCIÓN PRINCIPAL
 # ---------------------------------------------------------
-def reservar(forzar_manana=False):
+def reservar(forzar_manana=True):
 
     if forzar_manana:
         fecha_reserva = obtener_fecha_reserva_forzada()
@@ -65,7 +65,7 @@ def reservar(forzar_manana=False):
         browser = p.chromium.launch(headless=True)
 
         context = browser.new_context(
-            timeout=120000,  # Timeout global
+            timeout=120000,
             user_agent=(
                 "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) "
                 "AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 "
