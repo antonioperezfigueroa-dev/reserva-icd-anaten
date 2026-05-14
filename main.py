@@ -1,3 +1,4 @@
+print("VERSIÓN 14-MAY-2026 10:00 — Script actualizado")
 import os
 import time
 from datetime import datetime, timedelta
